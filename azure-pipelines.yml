@@ -28,7 +28,8 @@ steps:
 
 - task: AzureWebApp@1
   inputs:
+    azureSubscription: 'Azure subscription 1 (1)(4da1a076-68fd-400f-9e84-8926519c1839)'
     appType: 'webApp'
     appName: 'advaithadev'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    deploymentMethod: 'auto'
+    runtimeStack: 'DOTNETCORE|6.0'
